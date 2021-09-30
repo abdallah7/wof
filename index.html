@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+  </head>
+  <body>
+    
+<style>
+  body {margin: 0;background-color: black;background: url(https://trello.com/1/cards/61544de601bb954245035643/attachments/61545a6df21aa06e3ddcacab/previews/61545a6ff21aa06e3ddcb22e/download/bg.png);background-repeat: no-repeat;background-position: top;background-size: cover;}
+  .--main-container {width: 100%;position: relative;overflow: hidden;font-family: 'Roboto';margin-top: 41vw;}
+  .--row {width: 100%;position: relative;display: block;padding-bottom: 20%;padding-bottom: 2%;margin-top: 7px;}
+  .header-bg {position: relative;}
+  .header-bg img {max-width: 100%;width: 100%;}
+  .-header {display: flex;z-index: 1;}
+  .-logo {width: 15%;margin: 6% 6% 0 0;}
+  .-slogan {width: 42%;margin-right: 6%;}
+  .-slogan img {margin-top: 26%;}
+  .-live-section {margin: 0 auto;width: 98%;position: relative;margin-top: -4.5%;}
+  .main-image {position: absolute;width: 100%;}
+  .video-image {width: 100%;}
+  .main-image img,
+  .video-image {width: 100%;}
+  .social-links {display: flex;position: absolute;top: 20%;left: 15%;width: 15%;direction: ltr;}
+  .social-links a:first-of-type {margin-right: 5px;}
+  .social-links a {display: block;}
+  .social-links a img {width: 100%;}
+  .-giveawayes {display: flex;flex-wrap: wrap;margin: 0 auto;width: 90%;padding-bottom: 20px;}
+  .-giveawayes>div {width: 23.5%;margin-right: 2%;padding: .1em;z-index: 2;background-image: linear-gradient(180deg, black 21%, #ff333d, #ffcf08);border-radius: 5px;}
+  .-giveawayes>div:nth-child(4n) {margin-right: 0;}
+  .-giveawayes>div>div {background: black;}
+  .-giveawayes>div>div:last-of-type {border-radius: 0 0 5px 5px;text-align: center;}
+  .-giveawayes>div p {padding: 3px;margin: 0;font-size: 18px;font-weight: 900;color: white;}
+  .-giveawayes>div>div>img {width: 90%;margin-left: 5%;}
+  .-giveawyes-title {width: 100%;margin: 0 auto;padding: 8px 9px;}
+  .footer-bg {overflow: hidden;}
+  .footer-bg img {width: 120%;margin-left: -10%;max-width: 1000%;}
+  .video-bg1 {position: absolute;top: 5%;left: 57%;width: 65% !important;}
+  .video-bg2 {position: absolute;top: 51%;left: 5%;width: 79% !important;opacity: 0.8;}
+  .-giveawyes-title h1 {width: 100%;color: #000000;margin: 0;font-weight: 600;font-size: 15px;padding: 2px 13px;text-align: left;}
+  .t-c {width: 70%;margin: 0 auto;margin-top: 25px;background: white;border-radius: 22px;}
+  .t-c ul {color: #000000;font-size: 13px;padding-bottom: 12px;}
+  .t-c ul li {margin-bottom: 5px;}
+  .download-app {width: 100%;text-align: center;text-transform: uppercase;display: block;margin: 40px 0;}
+  .download-app:hover,
+  .download-app:visited {color: #000000;}
+  .countdown-container {display: none;font-size: 5vw;color: #ffffff;width: 90%;margin: 30px auto 6px auto;}
+  .countdown {display: flex;width: 65%;text-align: center;}
+  .countdown>div {width: 33%;text-align: center;margin: 0 auto;position: relative;}
+  .-text {font-size: 3vw;position: absolute !important;top: -5vw;width: 100% !important;}
+  .num {background: #e6e7e8;border: 2px solid #276076;border-radius: 7px;margin: 2px 10px;color: black;text-align: center;}
+  .countdown-text {width: 35%;text-align: center;}
+  .countdown-text>p {margin-top: 5px;}
+  .d-app {width: 75%;margin: 0 auto;font-size: 5vw;color: #ffffff;text-align: center;display: none;}
+  .d-app>p {width: 100%;margin: 2vw 0;}
+  .d-app>a {width: 60%;display: block;margin: 0 20%;}
+  .d-app>a>img {width: 100%;}
+  .d-app2 {width: 69%;margin: 0 auto 3%;font-size: 5vw;color: white;text-align: center;}
+  .d-app2>p {width: 100%;padding-top: 6px;margin: 5% 0;}
+  .d-app2>a {width: 80%;display: block;margin: 0 10%;}
+  .d-app2>a>img {width: 100%;display: block;}
+  .game-container {position: relative;width: 75%;margin: 3% auto 18% auto;}
+  .-app-only-text {font-size: 6vw;color: white;width: fit-content;background: #ff9900;border-radius: 50px;margin: 1% auto;padding: 2px 25px;display: none;}
+  .-row-2 {width: 100%;position: relative;margin-bottom: 35px;}
+  .-row-2>div {width: fit-content;position: relative;margin: 0 auto;}
+  .-row-2>div>button {font-size: 4vw;border: none;border-radius: 10px;color: white;background: #ff9900;padding: 7px 20px;margin: 2vw;}
+  .popup-container {position: fixed;top: 0;left: 0;width: 100%;background: #00000080;z-index: 22;display: none;margin: 0;height: 100%;}
+  .popup-container::after {content: '✖';color: white;position: absolute;z-index: 100;top: 2%;right: 9%;font-size: 24px;}
+  .play-button button {display: block;margin: 12vw auto 0 auto;border: none;background: #000000a6;width: 35vw;padding: 0;}
+  .play-button button img {width: 100%;height: auto;}
+  .play-button span {display: block;text-align: center;width: 90%;margin: 2vw auto 0 auto;color: white;font-size: 4vw;font-weight: 500;}
+  .play-button {width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 22;display: none;background: #0000009e;}
+  .image-wheel {-webkit-animation: spin 4s linear infinite;-moz-animation: spin 4s linear infinite;animation: spin 4s linear infinite;}
+  .wheel-container {width: 100%;position: relative;margin: 20px 0;margin-bottom: 26vw;z-index: 1;}
+  .wheel-box {width: 75%;margin: 0 auto;position: relative;}
+  .wheel-container img {width: 100%;height: auto;}
+  .spin-container {position: absolute;width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;z-index: 2;}
+  .wheel {position: absolute;top: 0;left: 0;right: 0;z-index: -1;transition: 6.5s;transition-timing-function: ease-out;}
+  #spin-now {border: none !important;background-color: transparent !important;height: 80% !important;width: 80% !important;margin: 10%;background-size: contain !important;}
+  #spin-now:hover,
+  #spin-now:active,
+  #spin-now:visited,
+  #spin-now:focus,
+  #spin-now:focus-within {border: none;background: none;}
+  @-moz-keyframes spin {100% {    -moz-transform: rotate(360deg);}}
+  @-webkit-keyframes spin {100% {    -webkit-transform: rotate(360deg);}}
+  @keyframes spin {100% {    -webkit-transform: rotate(360deg);    transform: rotate(360deg);}}
+  .coppy-button {background: none;border: none;outline: none;width: 45vw;height: 8vw;position: absolute;top: 53.9%;left: 22%;z-index: 99999999999999;}
+  #myInput {position: absolute;top: 71.3%;left: 34%;background: none;border: none;outline: none;font-size: 4.5vw;width: 39%;height: 7%;text-align: center;font-weight: 800;color: white;}
+  #app-m {display: none;}
+  </style>
+
+<div class="--main-container">
+  <div class="--main-container-bg">
+      <div class="--row">
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>          
+
+          <div class="play-button" id="splash-screen-voucher">
+              <div style="width: 60%;position: absolute;top: 38vw;margin: 0 20%;">
+                      <img src="img/good-luck.png" style="width: 100%;" alt="" id="gift-result" />
+              </div>
+          </div>
+          <div class="wheel-container" id="wheel-show">
+              <div class="wheel-box">
+                  <img class="wheel" src="img/weekend/wheel-friday.png" alt="" />
+                  <img class="wheel-fram" src="img/wheel-fram.png"
+                      alt="" style="width: 100%;max-width: 200%;" />
+                  <div class="spin-container">
+                      <button id="spin-now"> </button>
+                  </div>
+              </div>
+              <img src="img/base.png"
+                  style="position: absolute;top: 62%;width: 45%;left: 27.5%;z-index: -1111;" alt="" />
+          </div>
+          <script>
+            $(function () {
+              var degrees = 0;
+              var timesRun = 0;
+              var gift="" ;
+              var g1= 4320// 50% discount-phone
+              var g2= 4274// mouse pad-golden ticket
+              var g3= 4229// flash-
+              var g4= 4184// Bag-
+              var g5= 4139// good luck-
+              var g6= 4095// mug-
+              var g7= 4049// sma3at- 50-discount
+              var g8= 4005// note book-mouse
+
+              //weekend 
+              var minNumber = 1;
+              var maxNumber = 3;
+              var winning_odds = randomNumberFromRange(minNumber, maxNumber);
+              var spin = "";
+              if(winning_odds == 1){
+                spin = Gift_sellection ();
+              }else{
+                spin = 4139;
+                gift = 5 ;
+              }
+
+              function Gift_sellection(){
+                //check the gifts with stock 
+                //assign each eift to it's spin value 
+                gift = 1 ;
+                return 4320 ;
+              }
+
+              function randomNumberFromRange(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+              
+              function show_popup() {
+                switch(gift) {
+                    case 1:
+                        document.getElementById("gift-result").src="img/weekend/phone.png";
+                      break;
+                    case 5:
+                         document.getElementById("gift-result").src="img/good-luck.png";
+                      break;
+                  }
+                document.getElementById("splash-screen-voucher").style.display = "block";
+              }
+            
+              $("#spin-now").click(function () {
+                  $('#spin-now').css('pointer-events', 'none');
+                  $('#spin-now').css('filter', 'contrast(0.7)');
+                  $(".wheel").css({
+                    '-webkit-transform': 'rotate(' + spin + 'deg)',
+                    '-moz-transform': 'rotate(' + spin + 'deg)',
+                    '-ms-transform': 'rotate(' + spin + 'deg)',
+                    'transform': 'rotate(' + spin + 'deg)'
+                  });
+                    setTimeout(function () { show_popup(); }, 6600);
+              });
+            });
+
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+            
+        createCookie("gift1","cookies test","1");
+        alert( readCookie("gift1"));
+        
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else {
+                var expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+
+            </script>
+      </div>
+  </div>
+</div>
+
+
+  </body>
+</html>
+
+  
